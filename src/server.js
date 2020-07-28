@@ -46,7 +46,7 @@ export const server = new Server({
     },
 
     seeds(server) {
-        server.create("alarm", { Name: "Example alarm", Source: "Server 1", Metric: "CPU Usage", TriggerAt: { value: 80, condition: "lower" }, Status: 'P'});
+        server.create("alarm", { Name: "ExampleAlarm", Source: "Server 1", Metric: "CPU Usage", TriggerAt: { value: 80, condition: "lower" }, Status: 'P'});
         server.create("metricType", { Name: "FS Usage" });
         server.create("metricType", { Name: "Memory Usage" });
         server.create("metricType", { Name: "CPU Usage" });
