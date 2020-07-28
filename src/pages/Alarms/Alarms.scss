@@ -1,0 +1,91 @@
+.alarms-page {
+    .filters-box {
+        margin: 15px 0;
+        input {
+            margin-right: 25px;
+        }
+        .select {
+            margin-right: 25px;
+        }
+    }
+
+    .fab-add {    
+        position: absolute;
+        border: none;
+        font-size: 20px;
+        padding: 18px 22px;
+        bottom: 30px;
+        right: 115px;
+        border-radius: 50%;
+        outline: none;
+        background-color: #1e7e34;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color ease-in-out 0.3s;
+    }
+
+    .fab-add:hover {
+        background-color: #31bf52;
+    }
+
+    table {
+        margin-top: 15px;
+        border-radius: 5px;
+        thead {
+            tr:first-child {
+                background-color: #969696;
+                font-weight: 700;
+            }
+            tr {
+                th {
+                    padding: 15px 0;
+                }
+            }
+        }
+        tbody {
+            tr:nth-child(even) {
+                background-color: #c5c5c5;
+            }
+            tr:nth-child(odd) {
+                background-color: #fff;
+            }
+            tr {
+                td {
+                    padding: 15px 25px;
+                    button {
+                        margin-right: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+    .modal-alarm-form {
+        .body {
+            width: 500px;
+            padding: 0 25px 25px;
+            form {
+                input { 
+                    margin: 15px 0 5px 0;
+                    height: 38px;
+                }
+                button {
+                    margin-top: 15px;
+                }
+                .select {
+                    margin: 15px 0 5px 0
+                }
+                p {
+                    color: #bf1650;
+                    margin-top: 0;
+                    font-size: 12px;
+                }
+                  
+                p::before {
+                    display: inline;
+                    content: "⚠ ";
+                }
+            }
+        }
+    }
+}

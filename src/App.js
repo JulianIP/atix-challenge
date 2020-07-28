@@ -1,25 +1,39 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+import AppHeader from './components/AppHeader';
+import Home from './pages/Home';
+import Alarms from './pages/Alarms';
+import { useSelector } from 'react-redux';
+import Loading from './components/Loading';
+import './App.scss';
 
 function App() {
+  const isLoading = useSelector(store => store.Loading);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="app">
+      <Router>
+        <AppHeader />
+        <section className="app-body">
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route exact path="/Home">
+              <Home />
+            </Route>
+            <Route exact path="/Alarms">
+              <Alarms />
+            </Route>
+          </Switch>
+        </section>
+      </Router>
+      { isLoading && <Loading />}
+    </main>
   );
 }
 

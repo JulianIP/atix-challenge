@@ -1,0 +1,79 @@
+.app-header {
+    width: 100%;
+    height: 140px;
+    padding: 20px 55px;
+    background-color: #fff;
+    position: fixed;
+    top: 0; 
+    left: 0;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+
+    .navbar-header {
+        align-items: center;
+        display: flex;
+        svg {
+            margin-right: 25px;
+            font-size: 30px;
+            cursor: pointer;
+            color: #777;
+        }
+    }
+
+    .notification-badge {
+        position: relative;
+        cursor: pointer;
+
+        svg {
+            font-size: 30px;
+            color: #777;
+        }
+        .badge {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background-color: #ff0050;
+            color: #fff;
+            padding: 1px 5px;
+            border-radius: 5px;
+        }
+    }
+}  
+.sidenav-bar {
+    background-color: #212121;
+    height: calc(100vh - 140px);
+    width: 80px;
+    top: 140px;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    transform: translateX(-100%);
+    transition: transform ease-in-out 0.3s;
+
+    ul {
+        padding: 0;
+        list-style: none;
+        li {
+            width: 100%;
+            padding: 20px 0;
+            justify-content: center;
+            display: flex;
+            svg {
+                font-size: 40px;
+                color: #fff;
+            }
+            transition: background ease 0.3s;
+        }
+
+        li:hover {
+            background-color: #3a3a3a;
+        }
+    }
+
+    &.active {
+        transform: translateX(0);
+    }
+}

@@ -1,0 +1,52 @@
+.app {
+  width: 100%;
+
+  .app-body {
+    box-sizing: border-box;
+    position: relative;
+    margin-top: 140px;
+    background-color: #f3f3f3;
+    overflow-y: hidden;
+    height: calc(100vh - 140px);
+    padding: 30px 115px 30px 115px;
+  }
+
+  .button {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    outline: none;
+    cursor: pointer;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  }
+
+  .button:hover {
+    color: #fff;
+    background-color: #0062cc;
+    border-color: #005cbf;
+  }
+
+  .primary {
+    color: #fff;
+    background-color: #007bff;
+  }
+
+  .select, input {
+    height: 38px;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+    padding: 0 10px;
+    min-width: 200px;
+  }
+}
